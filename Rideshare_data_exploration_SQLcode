@@ -1,0 +1,409 @@
+---To merge all 12 monthly rideshare data files, I used the WITH function to create a temporary table in conjunction with the UNION ALL function to begin exploring the annual data.
+
+WITH year_data AS(
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_01` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_02` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_03` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_04` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_05` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_06` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_07` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_08` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_09` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_10` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_11` 
+
+UNION ALL
+
+SELECT *  
+FROM `rideshare-data-398317.2022_Rideshare_data.2022_12` 
+)
+
+--Each of the following queries used the above WITH and UNION ALL statements. However, for the purposes of display, I will only show the functions that followed so my analysis is easier to read and follow.
+
+
+--Total unique rides
+
+SELECT 
+  COUNT(ride_id) as unique_rides
+FROM year_data
+
+
+-- Total rides by rider type
+
+SELECT 
+  member_casual,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+GROUP BY
+  1
+ORDER BY
+2 DESC
+
+**Average ride time in minutes
+
+SELECT 
+  ROUND(AVG(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60),1) as AVG_ride_mins
+FROM year_data
+
+--Average ride time in minutes by member type
+
+SELECT 
+  member_casual,
+  ROUND(AVG(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60),1) as AVG_ride_mins
+FROM year_data
+GROUP BY
+1
+ORDER BY
+2 
+
+--MAX ride duration
+
+SELECT 
+  MAX(ride_duration)
+FROM year_data
+
+--MIN rid duration
+
+SELECT 
+  MIN(ride_duration)
+FROM year_data
+
+-- Total rides in minute segments 
+
+SELECT 
+  member_casual,
+  rideable_type,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) <3 THEN 1 ELSE NULL END) as ride_min_under_3min,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) <5 THEN 1 ELSE NULL END) as ride_min_under_5min,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 5 AND 15 THEN 1 ELSE NULL END) as ride_min_between_5_to_15min,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 15 AND 30 THEN 1 ELSE NULL END) as ride_min_between_15_to_30min,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 30 AND 45 THEN 1 ELSE NULL END) as ride_min_between_30_to_45min,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 45 AND 60 THEN 1 ELSE NULL END) as ride_min_between_45_to_60min,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 60 and 120 THEN 1 ELSE NULL END) as ride_min_between_1_to_2hr,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 120 and 300 THEN 1 ELSE NULL END) as ride_min_between_2_to_5hr,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 300 and 600 THEN 1 ELSE NULL END) as ride_min_between_5_to_10hr,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 600 and 900 THEN 1 ELSE NULL END) as ride_min_between_10_to_15hr,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 900 and 1200 THEN 1 ELSE NULL END) as ride_min_between_15_to_20hr,
+
+COUNT
+  (CASE 
+  WHEN(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60) BETWEEN 1200 and 1440 THEN 1 ELSE NULL END) as ride_min_20_to_24hrs
+
+FROM year_data
+GROUP BY
+  2,1
+ORDER BY
+  3,4,5,6,7,8,9,10 ASC
+
+-- Total rides by day of the week
+
+SELECT 
+  day_of_week,
+  member_casual,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+GROUP BY
+  1,2
+ORDER BY
+  1 ASC
+
+-- Average ride by day of the week
+
+SELECT 
+  ROUND(AVG(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60),1) as AVG_ride_mins_DOW
+FROM year_data
+GROUP BY
+  day_of_week
+ORDER BY
+  day_of_week ASC
+
+-- Total rides by month
+
+SELECT 
+  EXTRACT(MONTH FROM started_date) as month,
+  member_casual,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+GROUP BY
+  1,2
+ORDER BY
+  1 ASC
+
+-- Total rides by Quarter by rider type
+
+SELECT 
+  member_casual,
+    (CASE WHEN (EXTRACT(MONTH FROM started_date)) BETWEEN 1 AND 3 THEN TRUE ELSE FALSE END) AS Q1,
+    (CASE WHEN (EXTRACT(MONTH FROM started_date)) BETWEEN 4 AND 6 THEN TRUE ELSE FALSE END) AS Q2,
+    (CASE WHEN (EXTRACT(MONTH FROM started_date)) BETWEEN 7 AND 9 THEN TRUE ELSE FALSE END) AS Q3,
+    (CASE WHEN (EXTRACT(MONTH FROM started_date)) BETWEEN 10 AND 12 THEN TRUE ELSE FALSE END) AS Q4,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+GROUP BY
+  1,2,3,4,5
+ORDER BY
+6 DESC
+
+-- Top 25 most popular stations
+
+SELECT 
+  start_station_name,
+  member_casual,
+  start_lat,
+  start_lng,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+WHERE 
+  start_station_name IS NOT NULL
+GROUP BY
+  1,2,3,4
+ORDER BY
+5 DESC
+LIMIT 25
+
+-- Top 25 most popular member stations
+
+SELECT 
+  start_station_name,
+  member_casual,
+  start_lat,
+  start_lng,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+WHERE member_casual = "member" AND start_station_name IS NOT NULL
+GROUP BY
+  1,2,3,4
+ORDER BY
+5 DESC
+LIMIT 25
+
+-- Top 25 most popular casual stations
+
+SELECT 
+  start_station_name,
+  member_casual,
+  start_lat,
+  start_lng,
+  COUNT(ride_id) as number_of_rides
+FROM year_data
+WHERE member_casual = "casual" AND start_station_name IS NOT NULL
+GROUP BY
+  1,2,3,4
+ORDER BY
+5 DESC
+LIMIT 25
+
+--Total rides by bike type
+
+SELECT 
+  rideable_type,
+  COUNT(ride_id)
+FROM year_data
+GROUP BY 
+  1
+ORDER BY
+  2 DESC
+
+--Total rides by bike type by rider type
+
+SELECT 
+  rideable_type,
+  member_casual,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+GROUP BY 
+  1,2
+ORDER BY
+  3 DESC
+
+--Top 25 stations by bike type 
+
+SELECT 
+  start_station_name,
+  rideable_type,
+  member_casual,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL 
+GROUP BY 
+  1,2,3
+ORDER BY
+  4 DESC
+LIMIT 25
+
+--Top 25 classic bike stations 
+
+SELECT 
+  start_station_name,
+  start_lat,
+  start_lng,
+  member_casual,
+  rideable_type,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL AND rideable_type = "classic_bike"
+GROUP BY 
+  1,2,3,4,5
+ORDER BY
+  6 DESC
+LIMIT 25
+
+--Top 25 electric bike stations 
+
+SELECT 
+  start_station_name,
+  start_lat,
+  start_lng,
+  member_casual,
+  rideable_type,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL AND rideable_type = "electric_bike"
+GROUP BY 
+  1,2,3,4,5
+ORDER BY
+  6 DESC
+LIMIT 25
+
+--Top 25 stations causal/classic bike 
+
+SELECT 
+  start_station_name,
+  start_lat,
+  start_lng,
+  rideable_type,
+  member_casual,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL AND rideable_type = "classic_bike" AND member_casual = "casual"
+GROUP BY 
+  1,2,3,4,5
+ORDER BY
+  6 DESC
+LIMIT 25
+
+--Top 25 stations causal/electric bike 
+
+SELECT 
+  start_station_name,
+  start_lat,
+  start_lng,
+  rideable_type,
+  member_casual,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL AND rideable_type = "electric_bike" AND member_casual = "casual"
+GROUP BY 
+  1,2,3,4,5
+ORDER BY
+  6 DESC
+LIMIT 25
+
+--Top 25 stations member/electric bike 
+
+SELECT 
+  start_station_name,
+  start_lat,
+  start_lng,
+  rideable_type,
+  member_casual,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL AND rideable_type = "electric_bike" AND member_casual = "member"
+GROUP BY 
+  1,2,3,4,5
+ORDER BY
+  6 DESC
+LIMIT 25
+
+--Top 25 stations member/classic bike 
+
+SELECT 
+  start_station_name,
+  start_lat,
+  start_lng,
+  rideable_type,
+  member_casual,
+  COUNT(ride_id) AS total_rides
+FROM year_data
+WHERE start_station_name IS NOT NULL AND rideable_type = "classic_bike" AND member_casual = "member"
+GROUP BY 
+  1,2,3,4,5
+ORDER BY
+  6 DESC
+LIMIT 25
