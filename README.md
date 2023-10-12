@@ -4,7 +4,7 @@
 2. [Business Task](README.md#business-task)
 3. [Data Processing](README.md#data-processing)
 4. [Data Cleaning and Manipulation](README.md#data-cleaning-and-manipulation)
-5. [Analysis and Visualiztions](README.md#analysis-and-visualizations)
+5. [Analysis and Visualizations](README.md#analysis-and-visualizations)
 6. [Summary and Business Recommendations](README.md#summary-and-business-recommendations)
 
 ## Introduction
