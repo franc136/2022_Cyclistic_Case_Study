@@ -81,7 +81,7 @@ GROUP BY
 ORDER BY
 2 DESC
 
-**Average ride time in minutes
+--Average ride time in minutes
 
 SELECT 
   ROUND(AVG(EXTRACT(hour FROM ride_duration)*60 + EXTRACT(minute from ride_duration) + Extract(second from ride_duration)/60),1) as AVG_ride_mins
