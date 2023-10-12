@@ -172,6 +172,9 @@ Casual Riders:
 
 1. Since casual riders take longer rides but less frequently than members, one reason to purchase an annual membership would be to cost-effectively take more bike rides in Chicago.
 2. With member riders often using the service associated with commuting, casual riders could benefit from purchasing an annual membership if they would like to start commuting to work via bicycle.
-3. 
+3. A casual member would benefit from purchasing an annual membership if they would like to explore other neighborhoods of Chicago other than areas they frequent or live in.
+
+#### Digital Marketing Campaign Recommendations
+
 
 
