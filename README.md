@@ -61,7 +61,7 @@ All visualizations were made using Microsoft Excel and Tableau.
 
 #### Total Rides by Member Type
 
-To help define the difference between member and casual riders, I first looked at total rides by each member type and found member riders made up the greater majority of total rides taken. 
+To help define the difference between member and casual riders, I first looked at total rides by each member type and found member riders made up the greater majority of total rides taken. Of the 5,661,784 unique rides, member riders took about 20% more rides than casual riders.
 
 ![Total rides by member type](/Viz/Total_rides_by_member.png)
 
