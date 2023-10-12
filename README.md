@@ -73,6 +73,12 @@ I next looked at how long each of the member groups was averaging their respecti
 
 ![Average Ride in Min](/Viz/Avg_ride_min.png)
 
+#### Average Ride by Day of Week
+
+Looking at all ride times across both groups, it became clear that rides taken on the weekend days were consistently longer than rides throughout the weekdays. 
+
+![Avg ride DOW](/Viz/DOW_rides_in_min.png)
+
 #### Most Popular Ride Durations by Member Type
 
 To further explore how long each group was riding the Cyclistic bikes, I broke ride times into minute and hour segments and sorted each member group's rides into these segments. Though both groups took the majority of their rides in the 5-15min time segment, member riders took considerably more rides under 5min than casual riders. 
@@ -90,6 +96,27 @@ Looking at what type of bikes the two different groups were riding, you can see 
 
 ![Bike type by group](/Viz/Rides_by_bike_type.png)
 
+### When Were Riders Riding?
+
+#### Rides Per Quarter
+
+Next, I identified the most popular times that riders were taking out the bikes over the year. Focussing on rides by quarter, the most popular ride frequency occurred during Q2 and Q3 with a sharp drop off in ridership during Q1 and Q4. Despite lower ride counts in Q1 and Q4, across the board, member riders outnumbered casual riders during the whole year. 
+
+![Rides per quarter](/Viz/Rides_per_quarter.png)
+
+#### Rides Per Month
+
+Breaking down the most popular ride times further, I looked at the most popular rider months per group. The summer months of June and July were the most popular with casual riders, accounting for almost as many rides as member riders. Ridership across both groups was high from May to October, but per month, members still outrode casual members in all months. 
+
+![Rides per month](/Viz/rides_per_month.png)
+
+#### Rides Per Week
+
+Focussing on weekdays versus weekends I could see a stark difference between the two rider groups. Member riders have a much higher number of rides during the weekdays whereas casual riders take more rides over the weekends. Saturdays were the only day of the week where casual riders outnumbered member rides, however, Sunday was about equal with both groups. 
+
+![Rides per week](/Viz/Total_rides_DOW.png)
+
+### Where Were Riders Leaving From?
 
 
 
