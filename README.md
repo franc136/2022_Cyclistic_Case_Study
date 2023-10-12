@@ -138,7 +138,7 @@ Outside of downtown, popular stations that were furthest north (Lakeview neighbo
 
 #### Top 25 Casual Start Stations
 
-As we saw with the overall top 25 stations, when the top 25 casual rider stations were pulled, the trend of starting rides from locations near the lakeshore or popular tourist areas was consistent. 
+As we saw with the overall top 25 stations, when the top 25 casual rider stations were pulled, the trend of casual riders starting rides from locations near the lakeshore or popular tourist areas was consistent. 
 
 ![Top 25 casual](/Viz/Top_25_Start_Stations_CasualMembers.png)
 
