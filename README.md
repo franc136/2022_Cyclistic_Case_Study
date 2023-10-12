@@ -150,7 +150,7 @@ Also consistent with the overall top 25 stations, the top 25 member rider statio
 
 ![Top 25 member](/Viz/Top_25_Start_Stations_Members.png)
 
-![Top 25 member loop](/Viz/Top_25_Start_Stations_Members _Commuter_Detail.png)
+![Top 25 member loop](/Viz/Top_25_Start_Stations_Members_Commuter_Detail.png)
 
 ## Summary and Business Recommendations
 
