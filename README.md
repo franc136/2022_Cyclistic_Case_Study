@@ -118,6 +118,31 @@ Focussing on weekdays versus weekends I could see a stark difference between the
 
 ### Where Were Riders Leaving From?
 
+#### Top 25 Start Stations
+
+After looking at differences in time and bike type, I focussed on the geographical differences between rider groups, specifically from where they started their rides. Honing in on the top 25 start stations, you can notice that the casual riders' most popular stations tend to be near the lakeshore, popular tourist destinations (like Navy Pier or the Magnificient Mile (Michigan Ave.)), or in and around the Loop. In contrast, member riders' top stations were much more spread out across the city. 
+
+![top 25 stations](/Viz/Top_25_Start_Stations.png)
+
+Looking closer at downtown Chicago, as stated earlier, casual members frequent more stations at popular tourist destinations like the beach (Dusable Lake Shore Dr. and North Blvd, Michigan Ave. and Oak St.) and Navy Pier (Streeter Dr. and Grand Ave..)
+
+Member riders stations that are near downtown, are concentrated not near tourist locations but on transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
+
+![top 25 loop](/Viz/Top_25_Start_Stations_loop.png)
+
+Outside of downtown, popular stations that were furthest north (Lakeview neighborhood) and furthest south (Hyde Park neighborhood) were both popular member-rider stations, not casual riders.
+
+![top 25 NS](/Viz/Top_25_Start_Stations_NS.png)
+
+![top 25 Hyde Park](/Viz/Top_25_Start_Stations_HydePark.png)
+
+#### Top 25 Casual Start Stations
+
+
+
+
+
+
 
 
 ## Summary and Business Recommendations
