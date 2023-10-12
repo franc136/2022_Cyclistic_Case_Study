@@ -168,7 +168,7 @@ Casual Riders:
 3. Took the bulk of rides during the months of May-Oct, with very few in Q1 and Q4.
 4. Had the greatest concentration of rides taken from start stations in proximity to the lakefront and tourist attractions.
 
-#### Why Would a Casual Rider Buy an Annual Membership
+#### Why Would a Casual Rider Buy an Annual Membership?
 
 1. Since casual riders take longer rides but less frequently than members, one reason to purchase an annual membership would be to cost-effectively take more bike rides in Chicago.
 2. With member riders often using the service associated with commuting, casual riders could benefit from purchasing an annual membership if they would like to start commuting to work via bicycle.
@@ -176,5 +176,6 @@ Casual Riders:
 
 #### Digital Marketing Campaign Recommendations
 
-
+1.
+2. A major draw for casual members to switch to an annual membership would be if they were looking to use a bicycle to commute to work. To target new bicycle commuters, Cyclistic could run a digital advertising campaign with digital outdoor advertising at bus shelters and L-train station platforms/display ads in L-cars. Messaging could focus on avoiding downtime waiting for transportation and focus on the flexibility and freedom of commuting on one's own time via bicycle. 
 
