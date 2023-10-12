@@ -59,9 +59,9 @@ All visualizations were made using Microsoft Excel and Tableau Public.
 
 ### How Many Riders Were There?
 
-#### Total Rides by Member Type
+#### Total Rides by Rider Type
 
-To help define the difference between member and casual riders, I first looked at total rides by each member type and found member riders made up the greater majority of total rides taken. Of the 5,661,784 unique rides, member riders took about 20% more rides than casual riders.
+To help define the difference between member and casual riders, I first looked at total rides by each rider type and found member riders made up the greater majority of total rides taken. Of the 5,661,784 unique rides, member riders took about 20% more rides than casual riders.
 
 ![Total rides by member type](/Viz/Total_rides_by_member.png)
 
@@ -69,7 +69,7 @@ To help define the difference between member and casual riders, I first looked a
 
 #### Average Ride Time
 
-I next looked at how long each of the member groups was averaging their respective ride durations. Despite member riders taking more rides, I found that casual riders were taking much longer rides, which were averaging almost twice as long as member riders. 
+I next looked at how long each of the rider groups was averaging their respective ride durations. Despite member riders taking more rides, I found that casual riders were taking much longer rides, which were averaging almost twice as long as member riders. 
 
 ![Average Ride in Min](/Viz/Avg_ride_min.png)
 
@@ -81,9 +81,9 @@ Looking at the daily average ride times across both groups, it became clear that
 
 #### Most Popular Ride Durations by Member Type
 
-To further explore how long each group was riding the Cyclistic bikes, I broke ride times into minute and hour segments and sorted each member group's rides into these segments. Though both groups took the majority of their rides in the 5-15min time segment, member riders took considerably more rides under 5min than casual riders. 
+To further explore how long each group was riding the Cyclistic bikes, I broke ride times into minute and hour segments and sorted each rider group's rides into these segments. Though both groups took the majority of their rides in the 5-15min time segment, member riders took considerably more rides under 5min than casual riders. 
 
-This data was also sorted by bike type used by each member group. When compared, the member riders used a considerably larger amount of electric bikes versus the casual riders.
+This data was also sorted by bike type used by each rider group. When compared, the member riders used a considerably larger amount of electric bikes versus the casual riders.
 
 ![Member rides by time segment](/Viz/Member_rides_by_min_segment.png)
 
@@ -124,9 +124,9 @@ After looking at differences in time and bike type, I focussed on the geographic
 
 ![top 25 stations](/Viz/Top_25_Start_Stations.png)
 
-Looking closer at downtown Chicago, as stated earlier, casual members frequent more stations at popular tourist destinations like the beach (Dusable Lake Shore Dr. and North Blvd, Michigan Ave. and Oak St.) and Navy Pier (Streeter Dr. and Grand Ave..)
+Looking closer at downtown Chicago, as stated earlier, casual riders frequent more stations at popular tourist destinations like the beach (Dusable Lake Shore Dr. and North Blvd, Michigan Ave. and Oak St.) and Navy Pier (Streeter Dr. and Grand Ave..)
 
-Member riders stations that are near downtown, are not concentrated near tourist locations but at transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
+Popular member-rider stations that are near downtown, are not concentrated near tourist locations but at transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
 
 ![top 25 loop](/Viz/Top_25_Start_Stations_loop.png)
 
@@ -138,7 +138,7 @@ Outside of downtown, popular stations that were furthest north (Lakeview neighbo
 
 #### Top 25 Casual Start Stations
 
-As we saw with the overall top 25 stations, when the top 25 casual rider stations were pulled, the trend of casual riders starting rides from locations near the lakeshore or popular tourist areas was consistent. 
+As we saw with the overall top 25 stations, when the top 25 casual-rider stations were pulled, the trend of casual riders starting rides from locations near the lakeshore or popular tourist areas was consistent. 
 
 ![Top 25 casual](/Viz/Top_25_Start_Stations_CasualMembers.png)
 
@@ -146,7 +146,7 @@ As we saw with the overall top 25 stations, when the top 25 casual rider station
 
 #### Top 25 Member Start Stations
 
-Also consistent with the overall top 25 stations, the top 25 member rider stations were predominantly associated with transportation hubs like Ogilvey Transportation Center and Union Station (Clinton St. and Washington Blvd, Canal St. and Adams St.), in proximity to popular L-train stations (Clark St. and Division St. (Red Line), Wells St. stations in River North and Near North neighborhoods (Brown Line), and work/education hubs (Hyde Park stations (University of Chicago), Loomis St. and Lexington St. (University of Illinois at Chicago/Illinois Medical District), Kingsbury St. and Kinzie St. (Merchandise Mart).)
+Also consistent with the overall top 25 stations, the top 25 member-rider stations were predominantly associated with transportation hubs like Ogilvey Transportation Center and Union Station (Clinton St. and Washington Blvd, Canal St. and Adams St.), in proximity to popular L-train stations (Clark St. and Division St. (Red Line), Wells St. stations in River North and Near North neighborhoods (Brown Line), and work/education hubs (Hyde Park stations (University of Chicago), Loomis St. and Lexington St. (University of Illinois at Chicago/Illinois Medical District), Kingsbury St. and Kinzie St. (Merchandise Mart).)
 
 ![Top 25 member](/Viz/Top_25_Start_Stations_Members.png)
 
