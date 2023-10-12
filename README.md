@@ -63,6 +63,8 @@ To help define the difference between member and casual riders, I first looked a
 
 ![Total rides by member type](/Viz/Total_rides_by_member.png)
 
+### How Long Were Riders Riding?
+
 #### Average Ride Time
 
 I next looked at how long each of the member groups was averaging their respective ride durations. Despite member riders taking more rides, I found that casual riders were taking much longer rides, which were averaging almost twice as long as member riders. 
@@ -78,6 +80,15 @@ This data was also sorted by bike type used by each member group. When compared,
 ![Member rides by time segment](/Viz/Member_rides_by_min_segment.png)
 
 ![Casual rides by time segment](/Viz/Casual_rides_by_min_segment.png)
+
+### What Were Riders Riding?
+
+#### Bike Type By Group
+Looking at what type of bikes the two different groups were riding, you can see that member riders were pretty even in their rides on both classic and electric bikes. However, casual riders chose to ride the electric bikes more often than the classic option. Additionally, only casual riders tracked docked bikes in their data compared to members. As stated before, clarification on the validity of the docked bike data would need to be checked with the proper stakeholders. 
+
+![Bike type by group](/Viz/Rides_by_bike_type.png)
+
+
 
 
 ## Summary and Business Recommendations
