@@ -154,4 +154,22 @@ Also consistent with the overall top 25 stations, the top 25 member rider statio
 
 ## Summary and Business Recommendations
 
+#### How are Member Riders and Casual Riders Different?
+
+Member Riders
+1. Took more rides than casual riders, but on average rode for shorter amounts of time.
+2. Ride more often on weekdays and use both electric bikes and casual bikes consistently.
+3. Bulk of rides are taken during the months of May-Oct.
+4. The greatest concentration of rides are taken from start stations in proximity to transportation hubs/lines and employment/education centers.
+
+Casual Riders
+1. Took fewer rides than member riders, but on average rode for longer amounts of time.
+2. Ride more often on weekends and use electric bikes more frequently than classic bikes.
+3. Bulk of rides are taken during the months of May-Oct, with very few in Q1 and Q4.
+4. The greatest concentration of rides are taken from start stations in proximity to the lakefront and tourist attractions.
+
+#### Why Would a Casual Rider Buy an Annual Membership
+
+
+
 
