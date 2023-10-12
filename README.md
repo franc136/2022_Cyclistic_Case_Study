@@ -126,7 +126,7 @@ After looking at differences in time and bike type, I focussed on the geographic
 
 Looking closer at downtown Chicago, as stated earlier, casual members frequent more stations at popular tourist destinations like the beach (Dusable Lake Shore Dr. and North Blvd, Michigan Ave. and Oak St.) and Navy Pier (Streeter Dr. and Grand Ave..)
 
-Member riders stations that are near downtown, are concentrated not near tourist locations but on transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
+Member riders stations that are near downtown, are concentrated not near tourist locations but at transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
 
 ![top 25 loop](/Viz/Top_25_Start_Stations_loop.png)
 
