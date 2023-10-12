@@ -51,7 +51,11 @@ Major changes that were applied to all 12 data files include:
 
 ## Analysis and Visualizations
 
-All 12 cleaned monthly data files were uploaded to BigQuery where I used SQL to conduct all analysis. All SQL queries used in my analysis can be accessed [here.](https://github.com/franc136/2022_Cyclistic_Case_Study/blob/main/Rideshare_data_exploration_SQLcode) All visualizations were made using Microsoft Excel and Tableu.
+All 12 cleaned monthly data files were uploaded to BigQuery where I used SQL to conduct all analysis. 
+
+All SQL queries used in my analysis can be accessed [here.](https://github.com/franc136/2022_Cyclistic_Case_Study/blob/main/Rideshare_data_exploration_SQLcode) 
+
+All visualizations were made using Microsoft Excel and Tableau.
 
 #### Total Rides by Member Type
 
@@ -65,7 +69,16 @@ I next looked at how long each of the member groups was averaging their respecti
 
 ![Average Ride in Min](/Viz/Avg_ride_min.png)
 
-####
+#### Most Popular Ride Durations by Member Type
+
+To further explore how long each group was riding the Cyclistic bikes, I broke ride times into minute and hour segments and sorted each member group's rides into these segments. Though both groups took the majority of their rides in the 5-15min time segment, member riders took considerably more rides under 5min than casual riders. 
+
+This data was also sorted by bike type used by each member group. When compared, the member riders used a considerably larger amount of electric bikes versus the casual riders.
+
+![Member rides by time segment](/Viz/Member_rides_by_min_segment.png)
+
+![Casual rides by time segment](/Viz/Casual_rides_by_min_segment.png)
+
 
 ## Summary and Business Recommendations
 
