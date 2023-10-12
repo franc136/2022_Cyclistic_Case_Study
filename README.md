@@ -35,7 +35,7 @@ Once the raw data was downloaded, I renamed the data files with a common date-ba
 #### Issues with the Data
 After taking an initial look at the data, I noticed two major items that I would normally follow up with the stakeholder to get further clarification on before proceeding with the analysis:
 
-1. Much of the data had missing "start_station_name" or "end_station_name" column data. In these instances, the "stat_station_id" or "end_station_id" was also missing so there was no way to find the missing information with the data provided. In a real business situation, I would reach out to the stakeholders to see the reason this data was missing and if new data could be provided.
+1. Much of the data had missing "start_station_name" or "end_station_name" column data. In these instances, the "start_station_id" or "end_station_id" was also missing, so there was no way to find the missing information with the data provided. In a real business situation, I would reach out to the stakeholders to see the reason this data was missing and if new data could be provided.
 2. Many of the data rows listed the "bike_type" as a docked bike. To take a bike for a ride, the bike needs to leave the dock to begin a ride, so this led me to believe that the "docked bike" type may be an error with the data. The ride durations for bikes listed as "docked_bike" also ranged widely from 00:00 to up to 400+hrs. In a real business situation, I would reach out to the stakeholders to get further clarification on the meaning of a "docked bike" and move forward with the data accordingly. 
 
 ## Data Cleaning and Manipulation
@@ -55,7 +55,7 @@ All 12 cleaned monthly data files were uploaded to BigQuery where I used SQL to 
 
 All SQL queries used in my analysis can be accessed [here.](https://github.com/franc136/2022_Cyclistic_Case_Study/blob/main/Rideshare_data_exploration_SQLcode) 
 
-All visualizations were made using Microsoft Excel and Tableau.
+All visualizations were made using Microsoft Excel and Tableau Public.
 
 ### How Many Riders Were There?
 
@@ -100,19 +100,19 @@ Looking at what type of bikes the two different groups were riding, you can see 
 
 #### Rides Per Quarter
 
-Next, I identified the most popular times that riders were taking out the bikes over the year. Focussing on rides by quarter, the most popular ride frequency occurred during Q2 and Q3 with a sharp drop off in ridership during Q1 and Q4. Despite lower ride counts in Q1 and Q4, across the board, member riders outnumbered casual riders during the whole year. 
+Next, I identified the most popular times that riders were taking out the bikes over the year. Focussing on rides by quarter, the most popular ride frequency occurred during Q2 and Q3, with a sharp drop in ridership during Q1 and Q4. Despite lower ride counts in Q1 and Q4, across the board, member riders outnumbered casual riders during the whole year. 
 
 ![Rides per quarter](/Viz/Rides_per_quarter.png)
 
 #### Rides Per Month
 
-Breaking down the most popular ride times further, I looked at the most popular rider months per group. The summer months of June and July were the most popular with casual riders, accounting for almost as many rides as member riders. Ridership across both groups was high from May to October, but per month, members still outrode casual members in all months. 
+Breaking down the most popular ride times further, I looked at the most popular rider months per group. The summer months of June and July were the most popular with casual riders, accounting for almost as many rides as member riders. Ridership across both groups was high from May to October, but per month, member riders still outrode casual riders in all months. 
 
 ![Rides per month](/Viz/rides_per_month.png)
 
 #### Rides Per Week
 
-Focussing on weekdays versus weekends I could see a stark difference between the two rider groups. Member riders have a much higher number of rides during the weekdays whereas casual riders take more rides over the weekends. Saturdays were the only day of the week where casual riders outnumbered member rides, however, Sunday was about equal with both groups. 
+Focussing on weekdays versus weekends, I could see a stark difference between the two rider groups. Member riders have a much higher number of rides during the weekdays, whereas casual riders take more rides over the weekends. Saturdays were the only day of the week where casual riders outnumbered member rides, however, Sunday was about equal with both groups. 
 
 ![Rides per week](/Viz/Total_rides_DOW.png)
 
@@ -126,7 +126,7 @@ After looking at differences in time and bike type, I focussed on the geographic
 
 Looking closer at downtown Chicago, as stated earlier, casual members frequent more stations at popular tourist destinations like the beach (Dusable Lake Shore Dr. and North Blvd, Michigan Ave. and Oak St.) and Navy Pier (Streeter Dr. and Grand Ave..)
 
-Member riders stations that are near downtown, are concentrated not near tourist locations but at transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
+Member riders stations that are near downtown, are not concentrated near tourist locations but at transportation and workplace hubs such as Union Station (Canal St. and Adams St.) and the Merchandise Mart (Kingsbury St. and Kinzie St..) Of the overall top 25 start stations, none of the popular member stations were located within the boundaries of the Loop. 
 
 ![top 25 loop](/Viz/Top_25_Start_Stations_loop.png)
 
@@ -158,26 +158,27 @@ Also consistent with the overall top 25 stations, the top 25 member rider statio
 
 Member Riders:
 1. Took more rides than casual riders, but on average, rode for shorter amounts of time.
-2. Ride more often on weekdays and use both electric bikes and casual bikes consistently.
+2. Ride more often on weekdays and use electric and classic bikes consistently.
 3. Took the bulk of their rides during the months of May-Oct.
-4. Had the greatest concentration of rides taken from start stations in proximity to transportation hubs/lines and employment/education centers.
+4. Had the greatest number of rides taken from start stations near transportation hubs/lines and employment/education centers.
 
 Casual Riders:
 1. Took fewer rides than member riders, but on average, rode for longer amounts of time.
 2. Ride more often on weekends and use electric bikes more frequently than classic bikes.
-3. Took the bulk of rides during the months of May-Oct, with very few in Q1 and Q4.
-4. Had the greatest concentration of rides taken from start stations in proximity to the lakefront and tourist attractions.
+3. Took the bulk of their rides during the months of May-Oct, with very few in Q1 and Q4.
+4. Had the greatest number of rides taken from start stations near the lakefront and tourist attractions.
 
 #### Why Would a Casual Rider Buy an Annual Membership?
 
-1. Since casual riders take longer rides but less frequently than members, one reason to purchase an annual membership would be to cost-effectively take more bike rides in Chicago.
+1. Since casual riders take longer rides but less frequently than members, one reason to purchase an annual membership would be to take more bike rides in Chicago cost-effectively.
 2. With member riders often using the service associated with commuting, casual riders could benefit from purchasing an annual membership if they would like to start commuting to work via bicycle.
-3. A casual member would benefit from purchasing an annual membership if they would like to explore other neighborhoods of Chicago other than areas they frequent or live in.
+3. A casual rider would benefit from purchasing an annual membership if they would like to have greater access to transportation across more areas of the city when compared to classic modes of public transit (L-train and bus.)
+4. Casual riders looking to exercise more often, would benefit from purchasing an annual membership by taking more bicycle trips and using electric bicycles less frequently. 
 
 #### Digital Marketing Campaign Recommendations
 
-1. With the bulk of casual riders, riding near the lakeshore/tourist locations, a digital campaign would need to target casual riders that either live in Chicago or near the city, as it is unlikely that a traveling tourist will buy an annual membership. To target these customers, Cyclistic could run geo-targeted ads focusing on the collar counties of Chicago where the bulk of the suburbs exist. Within the city of Chicago, digital outdoor advertising could be targeted along the lakeshore and at popular tourist attractions where the base of casual riders rent bicycles. Messaging for this campaign would focus on exploring other less popular but notable neighborhoods and destinations in Chicago, outside the scope of typical tourist locations. This would encourage suburban casual riders to visit the city more often and justify the cost of purchasing an annual membership by taking more rides. Additionally, the same campaign messaging would encourage Chicago resident casual riders to take more rides and provide a reason to upgrade their Cyclistic membership. 
+1. With the bulk of casual riders, riding near the lakeshore/tourist locations, a digital campaign would need to target casual riders that either live in Chicago or near the city, as it is unlikely that a traveling tourist will buy an annual membership. To target these customers, Cyclistic could run geo-targeted ads focusing on the collar counties of Chicago where the bulk of the suburbs exist. Within the city of Chicago, digital outdoor advertising could be targeted along the lakeshore and at popular tourist attractions where the base of casual riders rent bicycles. Messaging for this campaign would focus on exploring other less popular but notable neighborhoods and destinations in Chicago, outside the scope of typical tourist locations. This would encourage suburban casual riders to visit the city more often and justify the cost of purchasing an annual membership by taking more rides. The same campaign messaging would also encourage Chicago resident casual riders to take more rides and provide a reason to upgrade their Cyclistic membership. 
 
-2. A major draw for casual riders to switch to an annual membership would be if they were looking to use a bicycle to commute to work. To target new bicycle commuters, Cyclistic could run a digital advertising campaign with digital outdoor advertising at bus shelters and L-train station platforms/display ads in L-cars. Messaging could focus on avoiding downtime waiting for transportation and emphasize the flexibility and freedom of commuting on one's own time via a bicycle.
+2. A significant draw for casual riders to switch to an annual membership would be if they were looking to use a bicycle to commute to work. To target new bicycle commuters, Cyclistic could run a digital advertising campaign with digital outdoor advertising at bus shelters and L-train station platforms/display ads in L-cars. Messaging could focus on avoiding downtime waiting for transportation and emphasize the flexibility and freedom of commuting on one's own time via a bicycle.
 
 3. To target seasonal dropoff casual riders, Cyclstic could run a digital campaign with seasonal membership promotions occurring in the spring and fall. Spring promotions would help to boost Q2 membership conversions before the peak ridership season, while time-sensitive year-end fall promotions could help kickstart membership sales for the following year.
