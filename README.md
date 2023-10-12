@@ -75,7 +75,7 @@ I next looked at how long each of the member groups was averaging their respecti
 
 #### Average Ride by Day of Week
 
-Looking at all ride times across both groups, it became clear that rides taken on the weekend days were consistently longer than rides throughout the weekdays. 
+Looking at the daily average ride times across both groups, it became clear that rides taken over the weekends were consistently longer than rides throughout the week. 
 
 ![Avg ride DOW](/Viz/DOW_rides_in_min.png)
 
