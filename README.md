@@ -55,10 +55,18 @@ All 12 cleaned monthly data files were uploaded to BigQuery where I used SQL to 
 
 #### Total Rides by Member Type
 
-To help define the difference between Member and Casual riders, I first looked at total rides by each member type and found member riders made up the greater majority of total rides taken. 
+To help define the difference between member and casual riders, I first looked at total rides by each member type and found member riders made up the greater majority of total rides taken. 
 
 ![Total rides by member type](/Viz/Total_rides_by_member.png)
 
-## Summary and Business Recommendations
+#### Average Ride Time
+
+I next looked at how long each of the member groups was averaging their respective ride durations. Despite member riders taking more rides, I found that casual riders were taking much longer rides, which were almost twice as long as member riders. 
 
 ![Average Ride in Min](/Viz/Avg_ride_min.png)
+
+####
+
+## Summary and Business Recommendations
+
+
