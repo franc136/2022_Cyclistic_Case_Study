@@ -57,6 +57,8 @@ All SQL queries used in my analysis can be accessed [here.](https://github.com/f
 
 All visualizations were made using Microsoft Excel and Tableau.
 
+### How Many Riders Were There?
+
 #### Total Rides by Member Type
 
 To help define the difference between member and casual riders, I first looked at total rides by each member type and found member riders made up the greater majority of total rides taken. 
