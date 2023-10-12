@@ -65,7 +65,7 @@ To help define the difference between member and casual riders, I first looked a
 
 #### Average Ride Time
 
-I next looked at how long each of the member groups was averaging their respective ride durations. Despite member riders taking more rides, I found that casual riders were taking much longer rides, which were almost twice as long as member riders. 
+I next looked at how long each of the member groups was averaging their respective ride durations. Despite member riders taking more rides, I found that casual riders were taking much longer rides, which were averaging almost twice as long as member riders. 
 
 ![Average Ride in Min](/Viz/Avg_ride_min.png)
 
