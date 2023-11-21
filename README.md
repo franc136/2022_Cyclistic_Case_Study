@@ -108,7 +108,7 @@ Next, I identified the most popular times that riders were taking out the bikes 
 
 Breaking down the most popular ride times further, I looked at the most popular rider months per group. The summer months of June and July were the most popular with casual riders, accounting for almost as many rides as member riders. Ridership across both groups was high from May to October, but per month, member riders still outrode casual riders in all months. 
 
-![Rides per month](/Viz/rides_per_month.png)
+![Rides per month](/Viz/Rides_per_month.png)
 
 #### Rides Per Week
 
