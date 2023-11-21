@@ -136,7 +136,7 @@ Outside of downtown, popular stations that were furthest north (Lakeview neighbo
 
 ![top 25 Hyde Park](/Viz/Top_25_Start_Stations_HydePark.png)
 
-#### Top 25 Casual Start Stations
+#### Top 25 Start Stations Casual Members
 
 As we saw with the overall top 25 stations, when the top 25 casual-rider stations were pulled, the trend of casual riders starting rides from locations near the lakeshore or popular tourist areas was consistent. 
 
@@ -144,7 +144,7 @@ As we saw with the overall top 25 stations, when the top 25 casual-rider station
 
 ![Top 25 casual loop](/Viz/Top_25_Start_Stations_Casual_Members_Loop_Detail.png)
 
-#### Top 25 Member Start Stations
+#### Top 25 Start Stations Members
 
 Also consistent with the overall top 25 stations, the top 25 member-rider stations were predominantly associated with transportation hubs like Ogilvey Transportation Center and Union Station (Clinton St. and Washington Blvd, Canal St. and Adams St.), in proximity to popular L-train stations (Clark St. and Division St. (Red Line), Wells St. stations in River North and Near North neighborhoods (Brown Line), and work/education hubs (Hyde Park stations (University of Chicago), Loomis St. and Lexington St. (University of Illinois at Chicago/Illinois Medical District), Kingsbury St. and Kinzie St. (Merchandise Mart).)
 
